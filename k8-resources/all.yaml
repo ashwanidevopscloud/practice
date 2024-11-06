@@ -12,8 +12,8 @@ spec:
   containers:
     - name: nginx
       image: nginx
-    - name: mysql
-      image: docker pull mysql
+    - name: almalinux
+      image: almalinux:9
       env:
         - name: course
           value: "devOps"

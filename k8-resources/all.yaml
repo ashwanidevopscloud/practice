@@ -12,8 +12,8 @@ spec:
   containers:
     - name: nginx
       image: nginx
-    - name: frontend
-      image: ashwani525/backend
+    - name: node
+      image: lts-bookworm-slim
       env:
         - name: course
           value: "devOps"

@@ -4,6 +4,6 @@ metadata:
   name: nginx-config
 data:
   # key: value
-  course: dev0ps
+  course: "dev0ps"
   duration: "120hrs"
-  trainer: siva
+  trainer: "siva"

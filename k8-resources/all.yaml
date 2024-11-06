@@ -13,7 +13,7 @@ spec:
     - name: nginx
       image: nginx
     - name: frontend
-      image: frontend:v1
+      image: ashwani525/backend
       env:
         - name: course
           value: "devOps"

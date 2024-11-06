@@ -12,6 +12,8 @@ spec:
   containers:
     - name: nginx
       image: nginx
+    - name: mysql
+      image: docker pull mysql
       env:
         - name: course
           value: "devOps"

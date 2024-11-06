@@ -12,8 +12,6 @@ spec:
   containers:
     - name: nginx
       image: nginx
-    - name: node
-      image: lts-bookworm-slim
       env:
         - name: course
           value: "devOps"

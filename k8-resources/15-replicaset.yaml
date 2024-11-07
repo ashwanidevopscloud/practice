@@ -21,8 +21,6 @@ spec:
       containers:
       - name: nginx
         image: nginx
-      - name: php-redis
-        image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v6  # Docker image used in each container
 ---
 apiVersion: v1
 kind: Service

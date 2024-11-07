@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels: # this are replicaset labels
+    app: nginx
+    tier: frontend
+spec:
+  replicas: 3  # Number of desired replicas for high availability
+  selector:
+    matchLabels:
+      app: nginx
+      tier: frontend  # This label is used to identify the Pods managed by this ReplicaSet
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tier: frontend  # Labels applied to each Pod created by the ReplicaSet
+    spec:
+      containers:
+      - name: php-redis
+        image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5  # Docker image used in each container
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: service-np
+spec:
+  type: nodePort
+  selector:
+    app: nginx
+    tier: frontend
+   
+  ports:
+    - name: nginx-svc-port
+      protocol: TCP
+      port: 80 # this is service port
+      targetPort: 80 # this container port in a pod
+      nodeport: 30002

@@ -9,4 +9,4 @@ metadata:
 spec: 
   containers:
     - name: nginx
-      image: nginx
+      image: nginx:stable-perl

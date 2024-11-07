@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: np-service
 spec:
-  type: nodePort
+  type: NodePort
   selector:
     app: nginx
     tier: frontend

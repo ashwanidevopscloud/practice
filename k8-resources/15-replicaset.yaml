@@ -22,7 +22,7 @@ spec:
         image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5  # Docker image used in each container
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: service-np
 spec:

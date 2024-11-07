@@ -11,5 +11,4 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: nginx-config
-              key: course
-          
+              key: course       

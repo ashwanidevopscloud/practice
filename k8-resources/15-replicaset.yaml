@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-np
+  name: np-service
 spec:
   type: nodePort
   selector:

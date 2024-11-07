@@ -36,4 +36,4 @@ spec:
       protocol: TCP
       port: 80 # this is service port
       targetPort: 80 # this container port in a pod
-      nodeport: 30002
+      nodePort: 30002

@@ -1,0 +1,40 @@
+apiVersion: app/v1
+kind: deploymentSet
+metadata:
+   name: deployment-pod
+   labels:  # this are deployment set labels
+     app: nginx
+     tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels: # this are to select the pod labels
+      app: nginx
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tier: backend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-deployment
+spec:
+  type: LoadBalancer
+  selectors:
+    app: nginx
+    tier: backend
+  ports:
+   - name: nginx-svc-port
+     protocol: TCP
+     port: 8080  #this is service port 
+     targetPort: 8080 # this is container port
+     nodePort: 3003
+    

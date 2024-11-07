@@ -28,7 +28,7 @@ metadata:
   name: service-deployment
 spec:
   type: LoadBalancer
-  selectors:
+  selector:
     app: nginx
     tier: backend
   ports:

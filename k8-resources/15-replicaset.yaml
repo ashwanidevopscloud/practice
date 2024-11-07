@@ -19,6 +19,8 @@ spec:
         tier: frontend  # Labels applied to each Pod created by the ReplicaSet
     spec:
       containers:
+      - name: nginx
+        image: nginx
       - name: php-redis
         image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v6  # Docker image used in each container
 ---

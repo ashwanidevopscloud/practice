@@ -36,5 +36,5 @@ spec:
      protocol: TCP
      port: 8080  #this is service port 
      targetPort: 8080 # this is container port
-     nodePort: 3003
+     nodePort: 30003
     

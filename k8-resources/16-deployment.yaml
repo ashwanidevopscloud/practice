@@ -1,5 +1,5 @@
 apiVersion: app/v1
-kind: deploymentSet
+kind: Deployment
 metadata:
    name: deployment-pod
    labels:  # this are deployment set labels

@@ -6,7 +6,7 @@ metadata:
      app: nginx
      tier: backend
 spec:
-  replicas: 3
+  replicas: 30
   selector:
     matchLabels: # this are to select the pod labels
       app: nginx

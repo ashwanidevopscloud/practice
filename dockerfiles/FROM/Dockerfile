@@ -1,5 +1,5 @@
 FROM almalinux:9
-ENV author="siva" \
+LABEL author="siva" \
       company="join" \
       topic="docker" \
       duration="40hours" 

@@ -3,7 +3,7 @@ ENV author="siva" \
       company="join" \
       topic="docker" \
       duration="40hours" 
-RUN dnf install nginx -y
+RUN echo "course:${author}", "duration:${duration}"
 # CMD ["nginx", "-g", "daemon off;"]
 # CMD ["ping", "google.com"]
 # ENTRYPOINT ["ping", "google.com"]
@@ -12,4 +12,4 @@ ENTRYPOINT ["ping"]
 LABEL author="siva" \
       company="join" \
       topic="docker" \
-      duration="40hours" \
+      duration="40hours" 

@@ -1,5 +1,5 @@
 FROM almalinux:9
-LABEL author="siva" \
+ENV author="siva" \
       company="join" \
       topic="docker" \
       duration="40hours" 
@@ -9,7 +9,7 @@ RUN dnf install nginx -y
 # ENTRYPOINT ["ping", "google.com"]
 CMD ["google.com"]
 ENTRYPOINT ["ping"]
-ENV   author="siva" \
+LABEL author="siva" \
       company="join" \
       topic="docker" \
       duration="40hours" \

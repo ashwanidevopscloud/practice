@@ -7,6 +7,10 @@ RUN echo "course:${author}", "duration:${duration}"
 # CMD ["nginx", "-g", "daemon off;"]
 # CMD ["ping", "google.com"]
 # ENTRYPOINT ["ping", "google.com"]
+RUN mkdir /tmp/docker
+WORKDIR /tmp/docker
+RUN pwd
+RUN echo "Hello" > hello.txt
 EXPOSE 80
 CMD ["google.com"]
 ENTRYPOINT ["ping"]
